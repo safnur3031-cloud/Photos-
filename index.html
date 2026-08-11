@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ДЭЛЬМА — Продукты питания оптом, Алматы</title>
+<meta name="description" content="ТОО Дэльма — официальный дистрибьютор ISTOR, GREEN CLUB, Sunan Food. Консервы, рыба, овощи оптом в Казахстане с 2009 года.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0f1f3d; --navy-light: #1a3060; --red: #c8281e; --red-light: #e8332a;
+  --white: #ffffff; --gray-bg: #f5f6f8; --gray-text: #6b7280; --border: #e5e7eb; --text: #1a1a2e;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Manrope', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,31,61,0.97); backdrop-filter: blur(10px); padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 40px; height: 40px; background: var(--red); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: white; }
+.logo-text { font-size: 20px; font-weight: 800; color: white; letter-spacing: 0.05em; }
+.logo-sub { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: -2px; }
+nav { display: flex; align-items: center; gap: 32px; }
+nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: white; }
+.nav-cta { background: var(--red); color: white !important; padding: 10px 20px; border-radius: 8px; font-weight: 600 !important; }
+.nav-cta:hover { background: var(--red-light) !important; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.burger span { width: 24px; height: 2px; background: white; border-radius: 2px; }
+.mobile-nav { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 16px; font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+.hero { min-height: 100vh; background: var(--navy); display: flex; align-items: center; position: relative; overflow: hidden; padding: 68px 24px 0; }
+.hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(200,40,30,0.15) 0%, transparent 70%); pointer-events: none; }
+.hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 80px 0; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,40,30,0.15); border: 1px solid rgba(200,40,30,0.3); color: #ff6b6b; padding: 6px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
+.hero-badge::before { content: ''; width: 6px; height: 6px; background: #ff6b6b; border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero h1 { font-size: clamp(36px,5vw,60px); font-weight: 800; color: white; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span { color: var(--red); display: block; }
+.hero-desc { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 36px; max-width: 480px; line-height: 1.7; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary { background: var(--red); color: white; padding: 15px 30px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+.btn-primary:hover { background: var(--red-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,40,30,0.4); }
+.btn-secondary { background: rgba(255,255,255,0.08); color: white; padding: 15px 30px; border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; }
+.btn-secondary:hover { background: rgba(255,255,255,0.15); }
+.hero-stats { display: flex; gap: 32px; margin-top: 48px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+.stat-item { display: flex; flex-direction: column; }
+.stat-num { font-size: 28px; font-weight: 800; color: white; }
+.stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hero-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px; text-align: center; backdrop-filter: blur(10px); transition: all 0.3s; }
+.hero-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+.hero-card:first-child { grid-column: span 2; background: rgba(200,40,30,0.1); border-color: rgba(200,40,30,0.2); }
+.hero-card-emoji { font-size: 36px; margin-bottom: 10px; display: block; }
+.hero-card-title { font-size: 13px; font-weight: 700; color: white; margin-bottom: 4px; }
+.hero-card-sub { font-size: 11px; color: rgba(255,255,255,0.5); }
+
+.brands { background: var(--navy-light); padding: 24px; }
+.brands-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; justify-content: center; }
+.brands-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+.brand-item { font-size: 15px; font-weight: 800; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; text-transform: uppercase; }
+
+.section { padding: 80px 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+.section-title { font-size: clamp(28px,4vw,44px); font-weight: 800; color: var(--navy); line-height: 1.15; }
+.section-sub { font-size: 16px; color: var(--gray-text); margin-top: 12px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+#catalog { background: var(--gray-bg); }
+.filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
+.filter-tab { padding: 8px 18px; border-radius: 100px; border: 2px solid var(--border); background: white; font-size: 13px; font-weight: 600; color: var(--gray-text); cursor: pointer; transition: all 0.2s; }
+.filter-tab:hover, .filter-tab.active { border-color: var(--navy); background: var(--navy); color: white; }
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.product-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: all 0.25s; border: 1px solid var(--border); }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+.product-img { width: 100%; height: 200px; background: var(--gray-bg); display: flex; align-items: center; justify-content: center; font-size: 64px; overflow: hidden; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.product-body { padding: 18px; }
+.product-cat { font-size: 11px; color: var(--red); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.product-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+.product-desc { font-size: 13px; color: var(--gray-text); line-height: 1.5; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.product-footer { display: flex; align-items: center; justify-content: space-between; }
+.product-price { font-size: 18px; font-weight: 800; color: var(--navy); }
+.product-price span { font-size: 12px; color: var(--gray-text); font-weight: 500; }
+.product-min { font-size: 11px; color: var(--gray-text); margin-top: 2px; }
+.product-btn { background: var(--navy); color: white; border: none; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+.product-btn:hover { background: var(--red); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-visual { background: var(--navy); border-radius: 24px; padding: 40px; position: relative; overflow: hidden; }
+.about-year { font-size: 80px; font-weight: 800; color: rgba(255,255,255,0.08); line-height: 1; margin-bottom: 16px; }
+.about-visual-title { font-size: 24px; font-weight: 800; color: white; margin-bottom: 16px; }
+.about-visual-text { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 24px; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.about-tag { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); padding: 6px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+.about-content h2 { font-size: clamp(28px,3vw,40px); font-weight: 800; color: var(--navy); margin-bottom: 20px; line-height: 1.2; }
+.about-content p { font-size: 16px; color: var(--gray-text); line-height: 1.7; margin-bottom: 16px; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.about-feature { display: flex; align-items: flex-start; gap: 12px; }
+.about-feature-icon { width: 40px; height: 40px; background: rgba(200,40,30,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.about-feature-text { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+
+#why { background: var(--navy); }
+#why .section-title { color: white; }
+#why .section-sub { color: rgba(255,255,255,0.5); }
+#why .section-eyebrow { color: #ff8f8f; }
+.why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.why-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px; transition: all 0.3s; }
+.why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+.why-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+.why-title { font-size: 17px; font-weight: 700; color: white; margin-bottom: 10px; }
+.why-text { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+#contact { background: var(--gray-bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.contact-info h2 { font-size: 32px; font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+.contact-info p { font-size: 16px; color: var(--gray-text); margin-bottom: 32px; }
+.contact-items { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { display: flex; align-items: flex-start; gap: 16px; }
+.contact-item-icon { width: 44px; height: 44px; background: var(--navy); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.contact-item-label { font-size: 11px; color: var(--gray-text); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 4px; }
+.contact-item-value { font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none; }
+.contact-item-value:hover { color: var(--red); }
+.contact-form { background: white; border-radius: 20px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.contact-form h3 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 24px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 10px; font-size: 14px; font-family: inherit; color: var(--navy); transition: border-color 0.2s; outline: none; background: white; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--navy); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit { width: 100%; padding: 14px; background: var(--red); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.2s; margin-top: 8px; }
+.form-submit:hover { background: var(--red-light); transform: translateY(-1px); }
+
+footer { background: var(--navy); padding: 48px 24px 24px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
+.footer-about p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-top: 14px; max-width: 320px; }
+.footer-col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer-links a:hover { color: white; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+.footer-cert { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  nav { display: none; } .burger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; padding: 60px 0 40px; gap: 40px; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .about-features { grid-template-columns: 1fr; }
+  .catalog-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .catalog-grid { grid-template-columns: 1fr; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-card:first-child { grid-column: span 1; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">
+    <div class="logo-icon">Д</div>
+    <div><div class="logo-text">ДЭЛЬМА</div><span class="logo-sub">ТОО · с 2009 года</span></div>
+  </a>
+  <nav>
+    <a href="#catalog">Каталог</a>
+    <a href="#about">О компании</a>
+    <a href="#why">Преимущества</a>
+    <a href="#contact" class="nav-cta">Связаться</a>
+  </nav>
+  <div class="burger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#catalog" onclick="closeMobileNav()">Каталог</a>
+  <a href="#about" onclick="closeMobileNav()">О компании</a>
+  <a href="#why" onclick="closeMobileNav()">Преимущества</a>
+  <a href="#contact" onclick="closeMobileNav()">Связаться с нами</a>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Официальный дистрибьютор</div>
+      <h1>Продукты питания<span>оптом по всему Казахстану</span></h1>
+      <p class="hero-desc">ТОО «Дэльма» — более 120 наименований консервов, рыбной продукции и овощей. Работаем с 2009 года. Сертифицированная продукция, конкурентные цены.</p>
+      <div class="hero-btns">
+        <a href="#catalog" class="btn-primary">Смотреть каталог →</a>
+        <a href="#contact" class="btn-secondary">Получить прайс</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">лет на рынке</div></div>
+        <div class="stat-item"><div class="stat-num">120+</div><div class="stat-label">наименований</div></div>
+        <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">стран-поставщиков</div></div>
+        <div class="stat-item"><div class="stat-num">КЗ</div><div class="stat-label">по всему Казахстану</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-grid">
+        <div class="hero-card"><span class="hero-card-emoji">🐟</span><div class="hero-card-title">ISTOR — рыбные консервы</div><div class="hero-card-sub">Горбуша, тунец, сайра, сардина</div></div>
+        <div class="hero-card"><span class="hero-card-emoji">🥫</span><div class="hero-card-title">Мясные консервы</div><div class="hero-card-sub">Говядина, конина ГОСТ</div></div>
+        <div class="hero-card"><span class="hero-card-emoji">🍍</span><div class="hero-card-title">GREEN CLUB</div><div class="hero-card-sub">Овощи, фрукты, грибы</div></div>
+        <div class="hero-card"><span class="hero-card-emoji">🫒</span><div class="hero-card-title">Sunan Food</div><div class="hero-card-sub">Оливки, специи</div></div>
+        <div class="hero-card"><span class="hero-card-emoji">🥛</span><div class="hero-card-title">Сгущённое молоко</div><div class="hero-card-sub">Разные производители</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="brands">
+  <div class="brands-inner">
+    <div class="brands-label">Наши бренды</div>
+    <div class="brand-item">ISTOR</div>
+    <div class="brand-item">GREEN CLUB</div>
+    <div class="brand-item">SUNAN FOOD</div>
+    <div class="brand-item">BATEL</div>
+    <div class="brand-item">ДЭЛЬМА</div>
+  </div>
+</div>
+
+<section class="section" id="catalog">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Каталог продукции</div>
+      <div class="section-title">Более 120 наименований товаров</div>
+      <div class="section-sub">Вся продукция сертифицирована и соответствует стандартам качества</div>
+    </div>
+    <div class="filter-tabs fade-in">
+      <button class="filter-tab active" onclick="filterCatalog('all',this)">Все товары</button>
+      <button class="filter-tab" onclick="filterCatalog('fish',this)">🐟 Рыбные консервы</button>
+      <button class="filter-tab" onclick="filterCatalog('meat',this)">🥩 Мясные консервы</button>
+      <button class="filter-tab" onclick="filterCatalog('veg',this)">🥬 Овощи и фрукты</button>
+      <button class="filter-tab" onclick="filterCatalog('other',this)">🌿 Другое</button>
+    </div>
+    <div class="catalog-grid" id="catalog-grid">
+
+      <!-- РЫБНЫЕ КОНСЕРВЫ -->
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/DPrFCBNR/IMG-1255.png" alt="Шпроты в масле" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · ISTOR</div>
+          <div class="product-name">Шпроты в масле из салаки</div>
+          <div class="product-desc">175 гр, ГОСТ 280-2009, срок 3 года. 30 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 230 ₸ <span>/ шт</span></div><div class="product-min">от 30 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/23fpmSF3/IMG-1257.png" alt="Шпроты большая банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · ISTOR</div>
+          <div class="product-name">Шпроты в масле (большая овальная)</div>
+          <div class="product-desc">Срок 3 года. 20 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 890 ₸ <span>/ шт</span></div><div class="product-min">от 20 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/d0R7LmbR/IMG-1435.jpg" alt="Капитан Вкусов Шпроты" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · ISTOR</div>
+          <div class="product-name">Капитан Вкусов Шпроты в масле (стекло)</div>
+          <div class="product-desc">Натуральное копчение. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 450 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/zW0mmW7g/IMG-1436.jpg" alt="Шпроты Экстра" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Шпроты Экстра в масле</div>
+          <div class="product-desc">Жестяная банка овальная. 20 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 350 ₸ <span>/ шт</span></div><div class="product-min">от 20 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/dwJJPhM8/IMG-1270.png" alt="Шпрот балтийский" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · ISTOR</div>
+          <div class="product-name">Истор Шпрот балтийский</div>
+          <div class="product-desc">240 гр, срок 36 мес. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">980 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/B5GzSyzH/IMG-1249.png" alt="Сайра Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · Batel</div>
+          <div class="product-name">Сайра тихоокеанская натуральная</div>
+          <div class="product-desc">240 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 350 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/pBm6JWNt/IMG-1260.png" alt="Сайра красная банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Сайра тихоокеанская (красная банка)</div>
+          <div class="product-desc">240 гр. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 200 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/j97MWWsX/IMG-1250.png" alt="Горбуша Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · Batel</div>
+          <div class="product-name">Горбуша натуральная кусочки</div>
+          <div class="product-desc">240 гр, срок 36 мес. 36 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 450 ₸ <span>/ шт</span></div><div class="product-min">от 36 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/SDC7ZQdB/IMG-1261.png" alt="Горбуша красная банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Горбуша натуральная 250г (красная банка)</div>
+          <div class="product-desc">250 гр. 36 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 400 ₸ <span>/ шт</span></div><div class="product-min">от 36 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/6Rn00thk/IMG-1254.png" alt="Тунец Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · Batel</div>
+          <div class="product-name">Тунец натуральный кусочки</div>
+          <div class="product-desc">240 гр, ГОСТ 7452-2014, срок 3 года. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">960 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/mKtKWqK/IMG-1251.png" alt="Скумбрия Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · Batel</div>
+          <div class="product-name">Скумбрия атлантическая с маслом</div>
+          <div class="product-desc">240 гр, срок 3 года. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 100 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/XZ4ds6Ln/IMG-1264.png" alt="Скумбрия жёлтая банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Скумбрия натуральная с маслом</div>
+          <div class="product-desc">240 гр, срок 3 года. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 050 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/4wf5BvF6/IMG-1256.png" alt="Сардина Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · Batel</div>
+          <div class="product-name">Сардина атлантическая с маслом</div>
+          <div class="product-desc">240 гр, срок 3 года. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 100 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/DgYkfjGZ/IMG-1263.png" alt="Сардина жёлтая банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Сардина натуральная с маслом</div>
+          <div class="product-desc">240 гр, ГОСТ 13865-2000, срок 3 года. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 050 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/jZbc0R23/IMG-1252.png" alt="Сельдь Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · Batel</div>
+          <div class="product-name">Сельдь тихоокеанская натуральная</div>
+          <div class="product-desc">240 гр, срок 36 мес. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">780 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/nxQbb7M/IMG-1262.jpg" alt="Сельдь оранжевая банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Сельдь натуральная с маслом</div>
+          <div class="product-desc">240 гр, срок 36 мес. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">750 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/SwRJB2rH/IMG-1258.jpg" alt="Печень трески" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы</div>
+          <div class="product-name">Печень трески натуральная</div>
+          <div class="product-desc">115 гр, ГОСТ 13272-2009, срок 30 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 980 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/gZYGSppx/IMG-1265.png" alt="Печень трески жёлтая" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Печень трески натуральная (жёлтая банка)</div>
+          <div class="product-desc">115 гр, срок 30 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 900 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/W4Z9VDsf/IMG-1273.jpg" alt="Килька балтийская" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Рыбные консервы · ISTOR</div>
+          <div class="product-name">Килька балтийская в томате</div>
+          <div class="product-desc">240 гр, срок 24 мес. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">680 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/RTC045bv/IMG-1268.png" alt="Килька шпротная в томате" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · ISTOR</div>
+          <div class="product-name">Килька шпротная в томатном соусе</div>
+          <div class="product-desc">240 гр, срок 24 мес. 48 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">650 ₸ <span>/ шт</span></div><div class="product-min">от 48 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/DDW28tX9/IMG-1253.png" alt="Лосось Batel" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы · Batel</div>
+          <div class="product-name">Лосось натуральный</div>
+          <div class="product-desc">240 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 600 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/3YMxH7KZ/IMG-1266.png" alt="Сёмга" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы</div>
+          <div class="product-name">Сёмга кусочки натуральная</div>
+          <div class="product-desc">240 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">2 100 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="fish">
+        <div class="product-img"><img src="https://i.ibb.co.com/Lzzd4Mmz/IMG-1259.png" alt="Форель" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Рыбные консервы</div>
+          <div class="product-name">Форель кусочки натуральная</div>
+          <div class="product-desc">240 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 800 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <!-- МЯСНЫЕ КОНСЕРВЫ -->
+      <div class="product-card fade-in" data-cat="meat">
+        <div class="product-img"><img src="https://i.ibb.co.com/zhfyQ9by/IMG-1272.jpg" alt="Говядина тушёная" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Мясные консервы · ISTOR</div>
+          <div class="product-name">Истор Говядина тушёная высший сорт</div>
+          <div class="product-desc">525 гр, ГОСТ 5284-84, срок 3 года. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 750 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="meat">
+        <div class="product-img"><img src="https://i.ibb.co.com/7JXRdsVn/IMG-1267.png" alt="Говядина Батырская" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Мясные консервы · ISTOR</div>
+          <div class="product-name">Говядина тушёная Батырская</div>
+          <div class="product-desc">525 гр, срок 3 года. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 650 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="meat">
+        <div class="product-img"><img src="https://i.ibb.co.com/0jkGZ6Wm/IMG-1271.png" alt="Конина тушёная" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Мясные консервы · ISTOR</div>
+          <div class="product-name">Истор Конина тушёная высший сорт</div>
+          <div class="product-desc">325 гр, срок 36 мес. 36 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 400 ₸ <span>/ шт</span></div><div class="product-min">от 36 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="meat">
+        <div class="product-img"><img src="https://i.ibb.co.com/xtD83Bgz/IMG-1274.jpg" alt="Паштет куриный" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Мясные консервы · ISTOR</div>
+          <div class="product-name">Паштет куриный из мяса птицы</div>
+          <div class="product-desc">100 гр, срок 24 мес.</div>
+          <div class="product-footer"><div><div class="product-price">510 ₸ <span>/ шт</span></div><div class="product-min">уточните у менеджера</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <!-- ОВОЩИ И ФРУКТЫ -->
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/xSwQBKnh/IMG-1210.jpg" alt="Кукуруза" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Овощи · GREEN CLUB</div>
+          <div class="product-name">Кукуруза сладкая в зёрнах</div>
+          <div class="product-desc">340 мл, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">330 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/wNdqcdr9/IMG-1221.png" alt="Кукуруза большая" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Овощи · GREEN CLUB</div>
+          <div class="product-name">Кукуруза сладкая в зёрнах (большая)</div>
+          <div class="product-desc">680 мл, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">590 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/ZzTBBnbH/IMG-1208.jpg" alt="Горошек зелёный" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Овощи · GREEN CLUB</div>
+          <div class="product-name">Горошек зелёный консервированный</div>
+          <div class="product-desc">400 гр, срок 48 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">320 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/dsqfWcMt/IMG-1220.png" alt="Горошек большая банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Овощи · GREEN CLUB</div>
+          <div class="product-name">Горошек зелёный (большая банка)</div>
+          <div class="product-desc">800 гр, срок 48 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">590 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/hxD25f1Z/IMG-1209.png" alt="Фасоль красная" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Овощи · GREEN CLUB</div>
+          <div class="product-name">Фасоль натуральная красная</div>
+          <div class="product-desc">400 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">350 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/20VfTpJX/IMG-1217.png" alt="Ананасы" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Фрукты · GREEN CLUB</div>
+          <div class="product-name">Ананасы кольцами в сиропе 580 мл</div>
+          <div class="product-desc">580 мл, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">810 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/qSwjKYP/IMG-1218.png" alt="Ананасы большая" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Фрукты · GREEN CLUB</div>
+          <div class="product-name">Ананасы кольцами в сиропе (большая)</div>
+          <div class="product-desc">850 мл, срок 36 мес. 6 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 290 ₸ <span>/ шт</span></div><div class="product-min">от 6 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/M5fCfNm7/IMG-1216.png" alt="Персики" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Фрукты · GREEN CLUB</div>
+          <div class="product-name">Персики в сиропе 850 мл</div>
+          <div class="product-desc">850 мл, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">990 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/XkxfDxTW/IMG-1219.png" alt="Маслины без косточек" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Оливки · GREEN CLUB</div>
+          <div class="product-name">Чёрные маслины без косточек</div>
+          <div class="product-desc">340 мл, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">940 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/h1JP4BPS/IMG-1213.png" alt="Маслины стеклянная банка" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Оливки · GREEN CLUB</div>
+          <div class="product-name">Маслины (стеклянная банка)</div>
+          <div class="product-desc">340 мл, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">990 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/WNg8fnmt/IMG-1286.png" alt="Оливки с перцем" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Оливки · SUNAN FOOD</div>
+          <div class="product-name">Зелёные оливки с красным перцем</div>
+          <div class="product-desc">280 гр, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">840 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/svwFCGJF/IMG-1285.png" alt="Оливки с лимоном" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Оливки · SUNAN FOOD</div>
+          <div class="product-name">Зелёные оливки с лимоном</div>
+          <div class="product-desc">280 гр, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">940 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/gMm0Pwk3/IMG-1283.png" alt="Оливки с апельсином" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Оливки · SUNAN FOOD</div>
+          <div class="product-name">Зелёные оливки с апельсином</div>
+          <div class="product-desc">280 гр, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">940 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/jZP0f7vw/IMG-1237.jpg" alt="Корнишоны" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Маринады · GREEN CLUB</div>
+          <div class="product-name">Корнишоны маринованные 1-3 см</div>
+          <div class="product-desc">Стеклянная банка, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">750 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/5hSMWwhw/IMG-1243.jpg" alt="Корнишоны 3-6 см" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Маринады · GREEN CLUB</div>
+          <div class="product-name">Корнишоны маринованные 3-6 см</div>
+          <div class="product-desc">Стеклянная банка, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">790 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/352Dz6TV/IMG-1229.jpg" alt="Помидоры черри" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Маринады · GREEN CLUB</div>
+          <div class="product-name">Помидоры черри маринованные</div>
+          <div class="product-desc">Стеклянная банка, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">890 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/bgsfx9VV/IMG-1230.jpg" alt="Ассорти корнишоны и черри" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Маринады · GREEN CLUB</div>
+          <div class="product-name">Ассорти корнишоны и черри маринованные</div>
+          <div class="product-desc">Стеклянная банка, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">890 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/qLvyDgGf/IMG-1225.png" alt="Огурцы маринованные" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Маринады · GREEN CLUB</div>
+          <div class="product-name">Огурцы маринованные (стекло)</div>
+          <div class="product-desc">Большая банка, срок 24 мес. 6 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 290 ₸ <span>/ шт</span></div><div class="product-min">от 6 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="veg">
+        <div class="product-img"><img src="https://i.ibb.co.com/1ttf3sB5/IMG-1228.jpg" alt="Острый перец маринованный" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Маринады · GREEN CLUB</div>
+          <div class="product-name">Hot Pickled Peppers острый перец</div>
+          <div class="product-desc">Стеклянная банка, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">890 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <!-- ДРУГОЕ -->
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/fVjtt1yS/IMG-1205.png" alt="Шампиньоны целые" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Грибы · GREEN CLUB</div>
+          <div class="product-name">Шампиньоны целые консервированные</div>
+          <div class="product-desc">400 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">610 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/CyYRvDg/IMG-1206.jpg" alt="Шампиньоны резаные" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Грибы · GREEN CLUB</div>
+          <div class="product-name">Шампиньоны резаные консервированные</div>
+          <div class="product-desc">400 гр, срок 36 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">290 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/DHFRLCkV/IMG-1215.png" alt="Шампиньоны целые средние" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Грибы · GREEN CLUB</div>
+          <div class="product-name">Шампиньоны целые (средняя банка)</div>
+          <div class="product-desc">700 гр, срок 36 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">990 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/RkZRT2dD/IMG-1246.png" alt="Томатная паста маленькая" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">⭐ Соусы · Собственное производство</div>
+          <div class="product-name">Томатная паста (маленькая банка)</div>
+          <div class="product-desc">260 гр, стеклянная банка, срок 12 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">450 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/7NYR4L7h/IMG-1247.png" alt="Томатная паста средняя" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Соусы · GREEN CLUB</div>
+          <div class="product-name">Томатная паста (средняя банка)</div>
+          <div class="product-desc">500 гр, стеклянная банка, срок 12 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">750 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/jPG9Nwy3/IMG-1222.jpg" alt="Томатная паста большая" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Соусы · GREEN CLUB</div>
+          <div class="product-name">Томатная паста (большая жестяная банка)</div>
+          <div class="product-desc">Срок 12 мес. 6 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">890 ₸ <span>/ шт</span></div><div class="product-min">от 6 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/mVDBDPsF/IMG-1231.png" alt="Оливковое масло 250мл" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Масло · GREEN CLUB</div>
+          <div class="product-name">Оливковое масло Green Club 250 мл</div>
+          <div class="product-desc">250 мл, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 390 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/C3QGKj65/IMG-1234.png" alt="Оливковое масло 500мл" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Масло · GREEN CLUB</div>
+          <div class="product-name">Оливковое масло Green Club 500 мл</div>
+          <div class="product-desc">500 мл, срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">2 490 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/cVGXdxk/IMG-1276.jpg" alt="Сгущёнка жестяная" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Молочные · Сгущёнка</div>
+          <div class="product-name">Сгущёнка с сахаром жестебанка 380 гр</div>
+          <div class="product-desc">380 гр, срок 12 мес. 24 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">460 ₸ <span>/ шт</span></div><div class="product-min">от 24 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/YFC9s6mX/IMG-1277.png" alt="Сгущёнка бутылка синяя" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Молочные · Сгущёнка</div>
+          <div class="product-name">Сгущёнка с сахаром ПЭТ 900 гр</div>
+          <div class="product-desc">900 гр, срок 7 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">830 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/wNh0HcVz/IMG-1275.jpg" alt="Nilapella Duo 350г" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Сладкое · Nilapella</div>
+          <div class="product-name">Nilapella Duo какао-ореховая паста 350г</div>
+          <div class="product-desc">350 гр, срок 12 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 200 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/vCPsQPtd/IMG-1278.png" alt="Nilapella Duo 300г" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Сладкое · Nilapella</div>
+          <div class="product-name">Nilapella Duo какао-ореховая паста 300г</div>
+          <div class="product-desc">300 гр, срок 12 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">1 050 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/tF8cTkk/IMG-1282.jpg" alt="Соевый соус" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Соусы · Tian Tian</div>
+          <div class="product-name">Соевый соус классический</div>
+          <div class="product-desc">Срок 24 мес. 12 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">490 ₸ <span>/ шт</span></div><div class="product-min">от 12 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/9mxL7WwV/IMG-1281.png" alt="Уксус столовый" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Прочее</div>
+          <div class="product-name">Уксус столовый 9%</div>
+          <div class="product-desc">Бутылка, срок 24 мес. 20 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">180 ₸ <span>/ шт</span></div><div class="product-min">от 20 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/S1r3PTh/IMG-1289.jpg" alt="Фунчоза" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Прочее</div>
+          <div class="product-name">Фунчоза рисовая лапша</div>
+          <div class="product-desc">Срок 24 мес. 30 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">320 ₸ <span>/ шт</span></div><div class="product-min">от 30 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/NnfnnZwG/IMG-1290.jpg" alt="Фучжу соевая спаржа" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Прочее</div>
+          <div class="product-name">Фучжу соевая спаржа</div>
+          <div class="product-desc">Срок 24 мес. 20 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">350 ₸ <span>/ шт</span></div><div class="product-min">от 20 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" data-cat="other">
+        <div class="product-img"><img src="https://i.ibb.co.com/SD25yZbZ/IMG-1291.jpg" alt="Батат фунчоза" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-cat">Прочее</div>
+          <div class="product-name">Батат фунчоза стеклянная лапша</div>
+          <div class="product-desc">Срок 24 мес. 20 шт. в упаковке.</div>
+          <div class="product-footer"><div><div class="product-price">380 ₸ <span>/ шт</span></div><div class="product-min">от 20 шт</div></div><a href="#contact" class="product-btn">Заказать</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual fade-in">
+        <div class="about-year">2009</div>
+        <div class="about-visual-title">ТОО «Дэльма» — надёжный партнёр в мире продовольствия</div>
+        <div class="about-visual-text">Основана в 2009 году. Официальный представитель торговых марок ISTOR, GREEN CLUB, Batel, Sunan Food и других. Более 120 наименований продукции.</div>
+        <div class="about-tags">
+          <div class="about-tag">🏆 Сертифицировано</div>
+          <div class="about-tag">📦 Опт и розница</div>
+          <div class="about-tag">🚚 Доставка по КЗ</div>
+          <div class="about-tag">✅ ГОСТ</div>
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <div class="section-eyebrow">О компании</div>
+        <h2>15 лет качества и доверия</h2>
+        <p>ТОО «Дэльма» является официальным дистрибьютором и представителем торговых марок ISTOR, GREEN CLUB, Batel, Sunan Food и других брендов.</p>
+        <p>Компания сотрудничает с поставщиками из Казахстана, России, Индии, Китая, Турции и Вьетнама. Вся продукция сертифицирована.</p>
+        <p>Собственное производство: томатная паста, аджика, соусы, корнишоны, тушёнка (говядина и конина).</p>
+        <div class="about-features">
+          <div class="about-feature"><div class="about-feature-icon">🌍</div><div class="about-feature-text">Поставщики из 6 стран мира</div></div>
+          <div class="about-feature"><div class="about-feature-icon">🏭</div><div class="about-feature-text">Собственное производство</div></div>
+          <div class="about-feature"><div class="about-feature-icon">📋</div><div class="about-feature-text">Все продукты сертифицированы</div></div>
+          <div class="about-feature"><div class="about-feature-icon">🤝</div><div class="about-feature-text">Гибкие условия сотрудничества</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Почему Дэльма</div>
+      <div class="section-title">Ваш надёжный партнёр</div>
+      <div class="section-sub">Работаем честно, доставляем вовремя, отвечаем за качество</div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in"><span class="why-icon">🏆</span><div class="why-title">Сертифицированная продукция</div><div class="why-text">Вся продукция проходит сертификацию и соответствует стандартам качества РК.</div></div>
+      <div class="why-card fade-in"><span class="why-icon">💰</span><div class="why-title">Конкурентные цены</div><div class="why-text">Прямые поставки от производителей без посредников.</div></div>
+      <div class="why-card fade-in"><span class="why-icon">🚀</span><div class="why-title">Широкий ассортимент</div><div class="why-text">Более 120 наименований. Рыба, мясо, овощи, соусы — всё в одном месте.</div></div>
+      <div class="why-card fade-in"><span class="why-icon">🤝</span><div class="why-title">Гибкие условия</div><div class="why-text">Индивидуальный подход. Обсудим объёмы, сроки и условия оплаты.</div></div>
+      <div class="why-card fade-in"><span class="why-icon">📦</span><div class="why-title">Стабильные поставки</div><div class="why-text">15 лет на рынке — стабильность. Поставки в срок по всему Казахстану.</div></div>
+      <div class="why-card fade-in"><span class="why-icon">🏭</span><div class="why-title">Собственное производство</div><div class="why-text">Производим томатную пасту, аджику, соусы и тушёнку под собственной маркой.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <div class="section-eyebrow">Контакты</div>
+        <h2>Свяжитесь с нами</h2>
+        <p>Готовы обсудить условия сотрудничества и ответить на все вопросы.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div><div class="contact-item-label">Адрес</div><div class="contact-item-value">Алматы, ул. Дубосековская 25, этаж 3</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div><div class="contact-item-label">Телефон</div><a href="tel:+77053725632" class="contact-item-value">+7 (705) 372-56-32</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">💬</div>
+            <div><div class="contact-item-label">WhatsApp</div><a href="https://wa.me/77053725632" class="contact-item-value">+7 (705) 372-56-32</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">👤</div>
+            <div><div class="contact-item-label">Руководитель</div><div class="contact-item-value">Ногайбаев Эльдар Хамитович</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form fade-in">
+        <h3>Получить прайс-лист</h3>
+        <div class="form-group"><label>Ваше имя</label><input type="text" placeholder="Иван Иванов"></div>
+        <div class="form-group"><label>Телефон</label><input type="tel" placeholder="+7 (___) ___-__-__"></div>
+        <div class="form-group"><label>Компания</label><input type="text" placeholder="Название вашей компании"></div>
+        <div class="form-group">
+          <label>Интересующая продукция</label>
+          <select>
+            <option>Рыбные консервы (ISTOR, Batel)</option>
+            <option>Мясные консервы</option>
+            <option>Овощи и фрукты (GREEN CLUB)</option>
+            <option>Оливки (Sunan Food)</option>
+            <option>Соусы и томатная паста</option>
+            <option>Весь ассортимент</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Комментарий</label><textarea placeholder="Примерный объём, сроки, другие вопросы..."></textarea></div>
+        <button class="form-submit" onclick="submitForm()">Отправить заявку →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a href="#" class="logo">
+          <div class="logo-icon">Д</div>
+          <div><div class="logo-text">ДЭЛЬМА</div><span class="logo-sub">ТОО · с 2009 года</span></div>
+        </a>
+        <p>Официальный дистрибьютор ISTOR, GREEN CLUB, Batel, Sunan Food. Более 120 наименований. Алматы, Казахстан.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Каталог</div>
+        <div class="footer-links">
+          <a href="#catalog">Рыбные консервы</a>
+          <a href="#catalog">Мясные консервы</a>
+          <a href="#catalog">Овощи и фрукты</a>
+          <a href="#catalog">Соусы и масла</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Компания</div>
+        <div class="footer-links">
+          <a href="#about">О компании</a>
+          <a href="#why">Преимущества</a>
+          <a href="#contact">Контакты</a>
+          <a href="tel:+77053725632">+7 (705) 372-56-32</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2009–2026 ТОО «Дэльма». Все права защищены.</div>
+      <div class="footer-cert">✅ Вся продукция сертифицирована · Алматы, Казахстан</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileNav(){ document.getElementById('mobile-nav').classList.toggle('open'); }
+function closeMobileNav(){ document.getElementById('mobile-nav').classList.remove('open'); }
+function filterCatalog(cat, btn){
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+  });
+}
+function submitForm(){
+  alert('Спасибо! Мы свяжемся с вами в ближайшее время.\n\nТелефон: +7 (705) 372-56-32');
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if(id === '#') return;
+    const el = document.querySelector(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
